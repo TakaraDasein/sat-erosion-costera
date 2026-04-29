@@ -23,5 +23,9 @@
     "three": "^0.184.0",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@10.29.3"
+  "packageManager": "pnpm@10.29.3",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/three": "^0.184.0"
+  }
 }

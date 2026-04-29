@@ -12,6 +12,7 @@ export default function Particles() {
 
     // Set canvas size
     const resizeCanvas = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -20,15 +21,16 @@ export default function Particles() {
 
     // Particle class
     class Particle {
-      x: number;
-      y: number;
-      size: number;
-      speedX: number;
-      speedY: number;
-      color: string;
-      opacity: number;
+      x: number = 0;
+      y: number = 0;
+      size: number = 0;
+      speedX: number = 0;
+      speedY: number = 0;
+      color: string = '#00BCD4';
+      opacity: number = 0;
 
       constructor() {
+        if (!canvas) return;
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.size = Math.random() * 2 + 0.5;
@@ -40,6 +42,7 @@ export default function Particles() {
       }
 
       update() {
+        if (!canvas) return;
         this.x += this.speedX;
         this.y += this.speedY;
 
