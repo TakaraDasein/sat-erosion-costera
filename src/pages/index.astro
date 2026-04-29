@@ -1,0 +1,232 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import ScrollFade from '../components/ScrollFade';
+import Particles from '../components/Particles';
+import LightPillar from '../components/LightPillar';
+import { Cpu, Users, Map as MapIcon, Mountain, Waves, Satellite } from 'lucide-react';
+---
+
+<Layout title="Achiki O'pala - Sistema de Alerta Temprana">
+  <!-- Particles Effect -->
+  <Particles client:load />
+
+  <main class="relative w-full overflow-x-hidden bg-black">
+    <!-- Hero Section - Scrolls up -->
+    <section class="sticky top-0 h-screen w-full overflow-hidden bg-black">
+      <!-- Header -->
+      <Header client:load />
+
+      <!-- Video Background with Professional Mask -->
+      <div class="absolute inset-0 z-0">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          class="absolute inset-0 w-full h-full object-cover"
+          style="filter: brightness(1.05) contrast(1.25) saturate(1.4) hue-rotate(-5deg);"
+          id="hero-video"
+        >
+          <source src="/video.mp4" type="video/mp4" />
+        </video>
+
+        <script>
+          // Optimize video playback speed for cinematic effect
+          const video = document.getElementById('hero-video') as HTMLVideoElement;
+          if (video) {
+            // Slow motion for more cinematic feel (0.6x = 40% slower)
+            video.playbackRate = 0.6;
+            
+            // Reduce quality on mobile for performance
+            if (window.innerWidth < 768) {
+              video.style.transform = 'scale(1.1)';
+              video.style.filter = 'brightness(1.0) contrast(1.3) saturate(1.5) blur(1px)';
+            }
+          }
+        </script>
+        
+        <!-- Color enhancement overlay mask -->
+        <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/5 via-transparent to-orange-500/5 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent mix-blend-soft-light"></div>
+        
+        <!-- Corner-focused Professional Mask - Stronger at edges, transparent in center -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+        
+        <!-- Logo color gradient overlays -->
+        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-orange-600/10"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,188,212,0.15),transparent_50%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(210,105,30,0.15),transparent_50%)]"></div>
+        
+        <!-- Subtle noise texture overlay for cinematic feel -->
+        <div class="absolute inset-0 opacity-[0.02] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 400 400%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 h-full flex flex-col px-8 lg:px-16 py-16 lg:py-20">
+        <!-- Main Content Area -->
+        <div class="flex-1 flex items-start justify-between pt-6 lg:pt-12">
+          <!-- Left Side - Consultation Card with Diagonal Stripes -->
+          <div class="btn-clipped double-stroke bg-stripes-pattern backdrop-blur-2xl bg-gradient-to-br from-black/60 via-gray-900/50 to-black/60 p-6 w-80 min-h-[400px] flex flex-col justify-between transition-none">
+            <div>
+              <h3 class="text-white font-semibold text-lg mb-3">
+                Sistema de Alerta Temprana Costero
+              </h3>
+              <p class="text-white/80 text-sm leading-relaxed mb-6">
+                Conoce cómo nuestro sistema puede proteger tu comunidad
+              </p>
+            </div>
+            <button class="btn-clipped bg-white text-black px-5 py-3 text-sm font-semibold hover:opacity-90 transition-opacity w-full mt-auto">
+              Conocer
+            </button>
+          </div>
+
+          <!-- Right Side - Action Buttons Vertical with Grid Pattern -->
+          <div class="flex flex-col gap-4">
+            <button class="btn-clipped bg-grid-pattern bg-black/40 border border-white/20 p-4 text-white hover:bg-cyan-400/30 hover:border-cyan-400/50 transition-none group">
+              <Mountain className="w-8 h-8 group-hover:text-cyan-400 transition-none" />
+            </button>
+            <button class="btn-clipped bg-grid-pattern bg-black/40 border border-white/20 p-4 text-white hover:bg-cyan-400/30 hover:border-cyan-400/50 transition-none group">
+              <Waves className="w-8 h-8 group-hover:text-cyan-400 transition-none" />
+            </button>
+            <button class="btn-clipped bg-grid-pattern bg-black/40 border border-white/20 p-4 text-white hover:bg-cyan-400/30 hover:border-cyan-400/50 transition-none group">
+              <Satellite className="w-8 h-8 group-hover:text-cyan-400 transition-none" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <div class="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
+          <div class="w-1 h-2 bg-white/50 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content wrapper - slides over hero -->
+    <div class="relative z-30 bg-black">
+      <!-- Shared Light Pillar Background for sections 2 and 3 -->
+      <div class="absolute inset-0 z-0">
+        <LightPillar 
+          client:load
+          topColor="#00E5FF"
+          bottomColor="#FF7043"
+          intensity={1.4}
+          rotationSpeed={0.15}
+          glowAmount={0.004}
+          pillarWidth={2.5}
+          pillarHeight={0.6}
+          noiseIntensity={0.2}
+          quality="high"
+        />
+      </div>
+
+      <!-- Dibulla Case Section - Banner with Scroll Fade (SECOND SECTION) -->
+      <section class="relative py-32 lg:py-48 overflow-hidden">
+        <!-- Dark overlay for readability -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
+
+        <div class="container mx-auto px-8 lg:px-16 relative z-10">
+          <ScrollFade client:load className="max-w-5xl mx-auto">
+            <div class="text-center space-y-8">
+              <h2 class="text-[36px] lg:text-[56px] font-bold uppercase text-white leading-tight">
+                El Caso de Dibulla
+              </h2>
+              
+              <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-orange-600 to-cyan-500 mx-auto"></div>
+              
+              <p class="text-white/90 text-lg lg:text-xl leading-relaxed">
+                La erosión costera en el municipio de <span class="text-orange-600 font-semibold">Dibulla (La Guajira)</span> ha provocado retrocesos de la línea de costa de hasta <span class="text-orange-600 font-semibold">170–175 metros en los últimos 35 años</span>, comprometiendo viviendas, infraestructura turística y, de manera crítica, el territorio ancestral de comunidades wayúu como la ranchería <span class="text-cyan-400 font-semibold">La Cachaca III</span>, donde la pérdida de playas, albercas y especies como el «chipi chipi» constituye una crisis humanitaria y cultural.
+              </p>
+
+              <div class="flex flex-wrap justify-center gap-4 pt-8">
+                <div class="liquid-glass rounded-xl px-6 py-4 border border-orange-600/20">
+                  <div class="text-orange-600 text-3xl font-bold">170m</div>
+                  <div class="text-white/70 text-sm uppercase tracking-wide">Retroceso</div>
+                </div>
+                <div class="liquid-glass rounded-xl px-6 py-4 border border-orange-600/20">
+                  <div class="text-orange-600 text-3xl font-bold">35</div>
+                  <div class="text-white/70 text-sm uppercase tracking-wide">Años</div>
+                </div>
+                <div class="liquid-glass rounded-xl px-6 py-4 border border-cyan-500/20">
+                  <div class="text-cyan-400 text-3xl font-bold">1</div>
+                  <div class="text-white/70 text-sm uppercase tracking-wide">Comunidad</div>
+                </div>
+              </div>
+
+              <p class="text-white/60 text-sm italic pt-4">
+                Fuente: Ávila & Baez, 2022; Vorágine, 2024
+              </p>
+            </div>
+          </ScrollFade>
+        </div>
+      </section>
+
+      <!-- Enfoques Section - Cards -->
+      <section class="relative py-20 lg:py-32">
+        <!-- Dark overlay for readability -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+
+        <div class="container mx-auto px-8 lg:px-16 relative z-10">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-[32px] lg:text-[48px] font-bold uppercase text-white leading-tight mb-4">
+              Nuestros Enfoques
+            </h2>
+            <p class="text-white/70 text-lg max-w-2xl mx-auto">
+              Tecnología avanzada al servicio de las comunidades costeras
+            </p>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1: IoT basado en Edge -->
+            <div class="liquid-glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300 border border-orange-600/20">
+              <div class="w-16 h-16 rounded-full bg-orange-600/20 flex items-center justify-center mb-6">
+                <Cpu className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 class="text-white font-bold text-xl uppercase mb-4">
+                IoT basado en Edge
+              </h3>
+              <p class="text-white/70 text-sm leading-relaxed">
+                Sensores inteligentes distribuidos en la costa que procesan datos en tiempo real, permitiendo respuestas inmediatas sin depender de conexión constante a la nube.
+              </p>
+            </div>
+
+            <!-- Card 2: IA Comunitaria Contextual -->
+            <div class="liquid-glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300 border border-cyan-500/20">
+              <div class="w-16 h-16 rounded-full bg-cyan-500/20 flex items-center justify-center mb-6">
+                <Users className="w-8 h-8 text-cyan-500" />
+              </div>
+              <h3 class="text-white font-bold text-xl uppercase mb-4">
+                IA Comunitaria Contextual
+              </h3>
+              <p class="text-white/70 text-sm leading-relaxed">
+                Inteligencia artificial que aprende del conocimiento ancestral wayúu, integrando saberes tradicionales con tecnología moderna para alertas culturalmente relevantes.
+              </p>
+            </div>
+
+            <!-- Card 3: Análisis Geoespacial -->
+            <div class="liquid-glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300 border border-orange-600/20">
+              <div class="w-16 h-16 rounded-full bg-orange-600/20 flex items-center justify-center mb-6">
+                <MapIcon className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 class="text-white font-bold text-xl uppercase mb-4">
+                Análisis Geoespacial y Proyección
+              </h3>
+              <p class="text-white/70 text-sm leading-relaxed">
+                Modelado predictivo de la línea costera usando datos satelitales y topográficos, anticipando retrocesos y protegiendo territorios ancestrales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

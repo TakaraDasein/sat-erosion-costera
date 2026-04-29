@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Rubik', sans-serif;
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold uppercase tracking-tight;
+    letter-spacing: -0.04em;
+  }
+
+  em, i {
+    font-family: 'Rubik', sans-serif;
+    font-style: italic;
+  }
+}
+
+@layer components {
+  /* Light liquid glass effect */
+  .liquid-glass {
+    @apply relative overflow-hidden;
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(4px);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.15) 20%,
+      transparent 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.15) 80%,
+      rgba(255, 255, 255, 0.45) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  /* Strong liquid glass effect for CTAs and panels */
+  .liquid-glass-strong {
+    @apply relative overflow-hidden;
+    background: rgba(255, 255, 255, 0.01);
+    background-blend-mode: luminosity;
+    backdrop-filter: blur(50px);
+    box-shadow: 
+      4px 4px 4px rgba(0, 0, 0, 0.05),
+      inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  }
+
+  .liquid-glass-strong::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.4px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.2) 20%,
+      transparent 40%,
+      transparent 60%,
+      rgba(255, 255, 255, 0.2) 80%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+
+  /* Advanced glassmorphism for consultation card */
+  .glass-consultation {
+    @apply relative overflow-hidden;
+    backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 1px 3px rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  }
+
+  .glass-consultation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Clipped corner buttons - more pronounced cut */
+  .btn-clipped {
+    clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+  }
+
+  /* Double stroke border effect */
+  .double-stroke {
+    @apply relative;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      0 0 0 1px rgba(0, 229, 255, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .double-stroke:hover {
+    border-color: rgba(0, 229, 255, 0.3);
+    box-shadow: 
+      0 0 0 1px rgba(0, 229, 255, 0.5),
+      inset 0 0 0 1px rgba(0, 229, 255, 0.1),
+      0 0 20px rgba(0, 229, 255, 0.2);
+  }
+
+  /* Grid pattern background for buttons */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 229, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 229, 255, 0.08) 1px, transparent 1px);
+    background-size: 12px 12px;
+    background-position: 0 0, 0 0;
+  }
+
+  /* Diagonal stripes background for card */
+  .bg-stripes-pattern {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 112, 67, 0.03) 0px,
+      rgba(255, 112, 67, 0.03) 2px,
+      transparent 2px,
+      transparent 12px,
+      rgba(0, 229, 255, 0.03) 12px,
+      rgba(0, 229, 255, 0.03) 14px,
+      transparent 14px,
+      transparent 24px
+    );
+  }
+}
