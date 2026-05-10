@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 
+declare const google: typeof globalThis.google;
+
 interface Project {
   id: string;
   title: string;
@@ -51,7 +53,7 @@ export default function MangroveMap({ projects, onSelectProject }: MangroveMapPr
       });
 
       try {
-        await loader.load();
+        await loader.importLibrary('maps');
 
         if (mapRef.current) {
           const googleMap = new google.maps.Map(mapRef.current, {

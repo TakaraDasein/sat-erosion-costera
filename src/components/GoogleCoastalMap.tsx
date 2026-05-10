@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
+
+declare const google: typeof globalThis.google;
 import {
   DIBULLA_COASTLINE_POINTS,
   DIBULLA_COASTAL_POLYGON,
@@ -274,7 +276,7 @@ export default function GoogleCoastalMap({
       libraries: ['places', 'drawing', 'geometry'],
     });
 
-    loader.load().then(() => {
+    loader.importLibrary('maps').then(() => {
       if (!mapRef.current) return;
 
       // Initialize map
