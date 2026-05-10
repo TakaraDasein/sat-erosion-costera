@@ -1,0 +1,646 @@
+{
+  "projects": [
+    {
+      "id": "mikoko-pamoja-kenya",
+      "title": "Mikoko Pamoja",
+      "subtitle": "Primer proyecto de carbono azul verificado del mundo",
+      "location": "Gazi Bay, Kenya",
+      "coordinates": {
+        "lat": -4.4242,
+        "lng": 39.5064
+      },
+      "country": "Kenya",
+      "region": "África Oriental",
+      "category": "carbono-azul",
+      "status": "activo",
+      "startYear": 2013,
+      "area": {
+        "total": 117,
+        "restored": 117,
+        "protected": 117,
+        "unit": "hectáreas"
+      },
+      "impact": {
+        "carbonSequestration": {
+          "value": 3000,
+          "unit": "ton CO₂/año",
+          "description": "Captura anual de carbono verificada por VCS"
+        },
+        "economicBenefit": {
+          "value": 7000,
+          "unit": "USD/año",
+          "description": "Ingresos por venta de créditos de carbono"
+        },
+        "biodiversity": {
+          "species": 45,
+          "increase": 120,
+          "unit": "%"
+        },
+        "socialBenefit": {
+          "households": 600,
+          "jobs": 25,
+          "description": "Empleos directos en monitoreo y conservación"
+        }
+      },
+      "methodology": {
+        "approach": "Conservación basada en la comunidad con créditos de carbono azul",
+        "techniques": [
+          "Reforestación participativa con especies nativas",
+          "Monitoreo comunitario de biomasa",
+          "Sistema de pago por servicios ecosistémicos",
+          "Educación ambiental"
+        ],
+        "species": [
+          "Rhizophora mucronata",
+          "Avicennia marina",
+          "Ceriops tagal"
+        ]
+      },
+      "monitoring": {
+        "frequency": "Trimestral",
+        "methods": [
+          "Medición de biomasa aérea",
+          "Análisis de núcleos de sedimento",
+          "Censos de biodiversidad",
+          "Encuestas socioeconómicas"
+        ],
+        "dataAvailable": true,
+        "publicData": true
+      },
+      "financialModel": {
+        "totalInvestment": 150000,
+        "currency": "USD",
+        "sources": [
+          "Plan Vivo Foundation",
+          "Venta de créditos VCS",
+          "Donaciones privadas"
+        ],
+        "roi": 4.5,
+        "sustainabilityYears": 20
+      },
+      "challenges": [
+        "Presión de desarrollo costero",
+        "Variabilidad en precio de créditos carbono",
+        "Capacitación técnica continua necesaria"
+      ],
+      "successFactors": [
+        "Participación activa de la comunidad local",
+        "Certificación internacional (VCS + Plan Vivo)",
+        "Diversificación de ingresos (carbono + ecoturismo)",
+        "Gobernanza transparente"
+      ],
+      "references": [
+        {
+          "citation": "Locatelli, T., Binet, T., Kairo, J. G., King, L., Madden, S., Patenaude, G., ... & Huxham, M. (2014). Turning the tide: how blue carbon and payments for ecosystem services (PES) might help save mangrove forests. *Ambio*, 43(8), 981-995.",
+          "doi": "10.1007/s13280-014-0530-y",
+          "url": "https://doi.org/10.1007/s13280-014-0530-y"
+        },
+        {
+          "citation": "Wylie, L., Sutton-Grier, A. E., & Moore, A. (2016). Keys to successful blue carbon projects: Lessons learned from global case studies. *Marine Policy*, 65, 76-84.",
+          "doi": "10.1016/j.marpol.2015.12.020",
+          "url": "https://doi.org/10.1016/j.marpol.2015.12.020"
+        }
+      ],
+      "images": {
+        "hero": "/images/mangroves/mikoko-pamoja-hero.jpg",
+        "gallery": [
+          "/images/mangroves/mikoko-pamoja-1.jpg",
+          "/images/mangroves/mikoko-pamoja-2.jpg"
+        ]
+      },
+      "contact": {
+        "organization": "Mikoko Pamoja Conservation Group",
+        "website": "https://www.planvivo.org/mikoko-pamoja",
+        "email": "info@mikokopamoja.org"
+      }
+    },
+    {
+      "id": "colombia-guajira",
+      "title": "Restauración Ecológica La Guajira",
+      "subtitle": "Recuperación de manglares en comunidades wayúu",
+      "location": "Bahía Hondita, La Guajira",
+      "coordinates": {
+        "lat": 11.6889,
+        "lng": -71.7036
+      },
+      "country": "Colombia",
+      "region": "Caribe Colombiano",
+      "category": "restauracion-comunitaria",
+      "status": "activo",
+      "startYear": 2015,
+      "area": {
+        "total": 1200,
+        "restored": 850,
+        "protected": 1200,
+        "unit": "hectáreas"
+      },
+      "impact": {
+        "carbonSequestration": {
+          "value": 4200,
+          "unit": "ton CO₂/año",
+          "description": "Estimación basada en biomasa medida"
+        },
+        "economicBenefit": {
+          "value": 450000,
+          "unit": "COP/año por familia",
+          "description": "Aumento en ingresos pesqueros y turismo"
+        },
+        "biodiversity": {
+          "species": 78,
+          "increase": 156,
+          "unit": "%"
+        },
+        "socialBenefit": {
+          "households": 450,
+          "jobs": 120,
+          "description": "Empleos en restauración, monitoreo y ecoturismo"
+        },
+        "fisheries": {
+          "increase": 23,
+          "unit": "%",
+          "description": "Incremento en captura pesquera artesanal"
+        }
+      },
+      "methodology": {
+        "approach": "Restauración ecológica con enfoque de participación intercultural",
+        "techniques": [
+          "Siembra de propágulos en viveros comunitarios",
+          "Restauración hidrológica de canales naturales",
+          "Exclusión temporal de ganado",
+          "Monitoreo participativo con GPS",
+          "Integración de conocimiento ancestral wayúu"
+        ],
+        "species": [
+          "Rhizophora mangle",
+          "Avicennia germinans",
+          "Laguncularia racemosa",
+          "Conocarpus erectus"
+        ]
+      },
+      "monitoring": {
+        "frequency": "Semestral",
+        "methods": [
+          "Parcelas permanentes de monitoreo",
+          "Imágenes satelitales Sentinel-2",
+          "Índices NDVI y MNDWI",
+          "Monitoreo de ictiofauna",
+          "Evaluación socioeconómica"
+        ],
+        "dataAvailable": true,
+        "publicData": true
+      },
+      "financialModel": {
+        "totalInvestment": 2400000,
+        "currency": "USD",
+        "sources": [
+          "Ministerio de Ambiente y Desarrollo Sostenible",
+          "Fondo Adaptación",
+          "USAID",
+          "Conservación Internacional"
+        ],
+        "sustainabilityYears": 15
+      },
+      "challenges": [
+        "Cambio climático (sequías prolongadas)",
+        "Conflictos por uso de suelo con ganadería",
+        "Limitada infraestructura de acceso",
+        "Necesidad de fortalecimiento institucional local"
+      ],
+      "successFactors": [
+        "Liderazgo de comunidades indígenas wayúu",
+        "Integración de saberes tradicionales y científicos",
+        "Restauración hidrológica previa a siembra",
+        "Diversificación de beneficios (pesca, carbono, turismo)",
+        "Alianzas interinstitucionales fuertes"
+      ],
+      "references": [
+        {
+          "citation": "Valderrama-Landeros, L., Rodríguez-Zúñiga, M. T., Troche-Souza, C., Velázquez-Salazar, S., Villeda-Chávez, E., Alcántara-Maya, J. A., ... & Ressl, R. (2017). Manglares de Colombia: extensión y cambios (1996-2016). *Comisión Nacional para el Conocimiento y Uso de la Biodiversidad*.",
+          "url": "https://www.biodiversidad.gob.co/media/file/RES_MANG/Manglares_Colombia_1996_2016.pdf"
+        },
+        {
+          "citation": "Worthington, T., & Spalding, M. (2018). *Mangrove Restoration Potential: A Global Map*. The Nature Conservancy and Cambridge Institute for Sustainability Leadership.",
+          "url": "https://www.nature.org/content/dam/tnc/nature/en/documents/MangroveRestorationPotential.pdf"
+        }
+      ],
+      "images": {
+        "hero": "/images/mangroves/guajira-hero.jpg",
+        "gallery": [
+          "/images/mangroves/guajira-1.jpg",
+          "/images/mangroves/guajira-2.jpg"
+        ]
+      },
+      "contact": {
+        "organization": "Conservación Internacional Colombia",
+        "website": "https://www.conservation.org/colombia",
+        "email": "colombia@conservation.org"
+      }
+    },
+    {
+      "id": "sundarbans-india-bangladesh",
+      "title": "Sundarbans Tiger Reserve",
+      "subtitle": "El manglar más grande del mundo",
+      "location": "Sundarbans, India-Bangladesh",
+      "coordinates": {
+        "lat": 21.9497,
+        "lng": 89.1833
+      },
+      "country": "India-Bangladesh",
+      "region": "Asia del Sur",
+      "category": "proteccion-biodiversidad",
+      "status": "activo",
+      "startYear": 1973,
+      "area": {
+        "total": 10000,
+        "restored": 5000,
+        "protected": 10000,
+        "unit": "km²"
+      },
+      "impact": {
+        "carbonSequestration": {
+          "value": 1200000,
+          "unit": "ton CO₂/año",
+          "description": "Almacenamiento masivo de carbono azul"
+        },
+        "biodiversity": {
+          "species": 290,
+          "endemic": 42,
+          "threatened": 18,
+          "unit": "especies"
+        },
+        "socialBenefit": {
+          "households": 4000000,
+          "description": "Población dependiente del ecosistema"
+        },
+        "coastalProtection": {
+          "erosionReduction": 35,
+          "unit": "%",
+          "description": "Reducción en erosión costera desde 1990"
+        },
+        "stormProtection": {
+          "description": "Protección contra ciclones para 4M de habitantes",
+          "damageReduction": 40,
+          "unit": "%"
+        }
+      },
+      "methodology": {
+        "approach": "Conservación integral con co-manejo gobierno-comunidades",
+        "techniques": [
+          "Zonas núcleo de protección estricta",
+          "Restauración asistida en zonas degradadas",
+          "Patrullaje anti-tala",
+          "Ecoturismo controlado",
+          "Alternativas económicas (apicultura, acuicultura)"
+        ],
+        "species": [
+          "Heritiera fomes (sundri)",
+          "Excoecaria agallocha (gewa)",
+          "Ceriops decandra (goran)",
+          "Bruguiera gymnorrhiza",
+          "Avicennia officinalis"
+        ]
+      },
+      "monitoring": {
+        "frequency": "Continuo",
+        "methods": [
+          "Monitoreo satelital Landsat/Sentinel",
+          "Censos de tigres con cámaras trampa",
+          "Estaciones meteorológicas",
+          "Batimetrías regulares",
+          "Evaluaciones socioeconómicas anuales"
+        ],
+        "dataAvailable": true,
+        "publicData": true
+      },
+      "financialModel": {
+        "totalInvestment": 45000000,
+        "currency": "USD",
+        "sources": [
+          "Gobiernos de India y Bangladesh",
+          "UNESCO Patrimonio Mundial",
+          "Global Environment Facility",
+          "Banco Mundial"
+        ],
+        "sustainabilityYears": 50
+      },
+      "challenges": [
+        "Aumento del nivel del mar (3.14 mm/año)",
+        "Salinización de suelos por intrusión salina",
+        "Conflictos humano-tigre",
+        "Presión poblacional extrema",
+        "Infraestructura inadecuada para turismo sostenible"
+      ],
+      "successFactors": [
+        "Reconocimiento UNESCO (Patrimonio Mundial 1997)",
+        "Sistema de co-manejo con comunidades locales",
+        "Investigación científica de largo plazo",
+        "Turismo bien regulado como fuente de ingresos",
+        "Cooperación transfronteriza India-Bangladesh"
+      ],
+      "references": [
+        {
+          "citation": "Ghosh, A., Schmidt, S., Fickert, T., & Nüsser, M. (2015). The Indian Sundarban mangrove forests: history, utilization, conservation strategies and local perception. *Diversity*, 7(2), 149-169.",
+          "doi": "10.3390/d7020149",
+          "url": "https://doi.org/10.3390/d7020149"
+        },
+        {
+          "citation": "Rahman, M. M., Zimmer, M., Ahmed, I., Donato, D., Kanzaki, M., & Xu, M. (2021). Co-benefits of protecting mangroves for biodiversity conservation and carbon storage. *Nature Communications*, 12(1), 3875.",
+          "doi": "10.1038/s41467-021-24207-4",
+          "url": "https://doi.org/10.1038/s41467-021-24207-4"
+        }
+      ],
+      "images": {
+        "hero": "/images/mangroves/sundarbans-hero.jpg",
+        "gallery": []
+      },
+      "contact": {
+        "organization": "Sundarban Tiger Reserve",
+        "website": "https://www.sundarbantigerreserve.org",
+        "email": "info@sundarbantigerreserve.org"
+      }
+    },
+    {
+      "id": "vietnam-mekong-delta",
+      "title": "Restauración del Delta del Mekong",
+      "subtitle": "Reforestación masiva post-guerra de Vietnam",
+      "location": "Delta del Mekong, Vietnam",
+      "coordinates": {
+        "lat": 10.0452,
+        "lng": 105.7469
+      },
+      "country": "Vietnam",
+      "region": "Sudeste Asiático",
+      "category": "restauracion-masiva",
+      "status": "activo",
+      "startYear": 2000,
+      "area": {
+        "total": 8500,
+        "restored": 6200,
+        "protected": 8500,
+        "unit": "hectáreas"
+      },
+      "impact": {
+        "carbonSequestration": {
+          "value": 25000,
+          "unit": "ton CO₂/año",
+          "description": "Estimación basada en tasa de crecimiento rápido"
+        },
+        "economicBenefit": {
+          "value": 2800000,
+          "unit": "USD/año",
+          "description": "Ingresos combinados de acuicultura, madera y ecoturismo"
+        },
+        "biodiversity": {
+          "species": 152,
+          "increase": 280,
+          "unit": "%"
+        },
+        "socialBenefit": {
+          "households": 12000,
+          "jobs": 4500,
+          "description": "Empleos en acuicultura-silvicultura integrada"
+        },
+        "aquaculture": {
+          "production": 15000,
+          "unit": "ton/año",
+          "description": "Producción de camarones y peces en sistemas integrados"
+        }
+      },
+      "methodology": {
+        "approach": "Sistemas integrados de acuicultura-silvicultura (VAC)",
+        "techniques": [
+          "Sistema VAC (huerto-estanque-jaula)",
+          "Canales de marea restaurados",
+          "Siembra mixta de especies",
+          "Rotación acuicultura extensiva",
+          "Barreras de sedimentación con bambú"
+        ],
+        "species": [
+          "Rhizophora apiculata",
+          "Avicennia alba",
+          "Sonneratia caseolaris",
+          "Bruguiera cylindrica"
+        ]
+      },
+      "monitoring": {
+        "frequency": "Anual",
+        "methods": [
+          "Inventarios forestales",
+          "Monitoreo de calidad de agua",
+          "Evaluación de producción acuícola",
+          "Sensores remotos MODIS",
+          "Encuestas de ingresos familiares"
+        ],
+        "dataAvailable": true,
+        "publicData": true
+      },
+      "financialModel": {
+        "totalInvestment": 18000000,
+        "currency": "USD",
+        "sources": [
+          "Gobierno de Vietnam",
+          "Banco Asiático de Desarrollo",
+          "JICA (Japón)",
+          "Programa MAB-UNESCO"
+        ],
+        "roi": 3.2,
+        "sustainabilityYears": 25
+      },
+      "challenges": [
+        "Conversión a granjas camaroneras intensivas",
+        "Contaminación agrícola río arriba",
+        "Subsidencia de suelos (hundimiento)",
+        "Eventos climáticos extremos (tifones)",
+        "Balance entre producción y conservación"
+      ],
+      "successFactors": [
+        "Modelo económico viable (acuicultura integrada)",
+        "Políticas gubernamentales de largo plazo",
+        "Experiencia técnica acumulada desde 1970s",
+        "Red de reservas de biosfera UNESCO",
+        "Mercado internacional para productos sostenibles"
+      ],
+      "references": [
+        {
+          "citation": "Schmitt, K., & Duke, N. C. (2015). Mangrove management in Vietnam: has economic development overshadowed conservation? *Estuarine, Coastal and Shelf Science*, 164, A1-A4.",
+          "doi": "10.1016/j.ecss.2015.08.002",
+          "url": "https://doi.org/10.1016/j.ecss.2015.08.002"
+        },
+        {
+          "citation": "Nguyen, H. T. T., Stanton, P., & Nguyen, H. T. M. (2013). Mangrove plantations for carbon credits: Key factors for successful implementation. *International Journal of Climate Change Strategies and Management*, 5(3), 312-327.",
+          "doi": "10.1108/IJCCSM-03-2012-0016",
+          "url": "https://doi.org/10.1108/IJCCSM-03-2012-0016"
+        }
+      ],
+      "images": {
+        "hero": "/images/mangroves/vietnam-hero.jpg",
+        "gallery": []
+      },
+      "contact": {
+        "organization": "Vietnam Administration of Forestry",
+        "website": "https://www.kiemlam.org.vn",
+        "email": "info@kiemlam.org.vn"
+      }
+    },
+    {
+      "id": "florida-everglades",
+      "title": "Everglades Restoration",
+      "subtitle": "El proyecto de restauración ecológica más grande de EE.UU.",
+      "location": "Everglades, Florida",
+      "coordinates": {
+        "lat": 25.2866,
+        "lng": -80.8987
+      },
+      "country": "Estados Unidos",
+      "region": "América del Norte",
+      "category": "restauracion-integral",
+      "status": "activo",
+      "startYear": 2000,
+      "area": {
+        "total": 7300,
+        "restored": 4100,
+        "protected": 7300,
+        "unit": "hectáreas"
+      },
+      "impact": {
+        "carbonSequestration": {
+          "value": 18000,
+          "unit": "ton CO₂/año"
+        },
+        "biodiversity": {
+          "species": 67,
+          "endangered": 16,
+          "unit": "especies"
+        },
+        "waterQuality": {
+          "improvement": 45,
+          "unit": "%",
+          "description": "Reducción en concentración de fósforo"
+        },
+        "hurricaneProtection": {
+          "damageReduction": 25,
+          "unit": "%",
+          "description": "Reducción estimada de daños por huracanes"
+        }
+      },
+      "methodology": {
+        "approach": "Restauración hidrológica integral con flujo natural",
+        "techniques": [
+          "Remoción de diques y canales artificiales",
+          "Restauración de flujo de agua (sheet flow)",
+          "Elevación de carreteras para permitir flujo",
+          "Reforestación con especies nativas",
+          "Tratamiento de aguas agrícolas previo"
+        ],
+        "species": [
+          "Rhizophora mangle",
+          "Avicennia germinans",
+          "Laguncularia racemosa",
+          "Conocarpus erectus"
+        ]
+      },
+      "monitoring": {
+        "frequency": "Continuo",
+        "methods": [
+          "Estaciones de monitoreo hidrológico (150+)",
+          "Sensores de calidad de agua en tiempo real",
+          "Censos aéreos de vida silvestre",
+          "LiDAR para topografía",
+          "Modelos predictivos computacionales"
+        ],
+        "dataAvailable": true,
+        "publicData": true
+      },
+      "financialModel": {
+        "totalInvestment": 16300000000,
+        "currency": "USD",
+        "sources": [
+          "Gobierno Federal de EE.UU.",
+          "Estado de Florida",
+          "South Florida Water Management District"
+        ],
+        "sustainabilityYears": 50
+      },
+      "challenges": [
+        "Presión de desarrollo urbano (Miami)",
+        "Contaminación agrícola persistente",
+        "Especies invasoras (pitón birmana)",
+        "Aumento del nivel del mar",
+        "Coordinación de 60+ agencias"
+      ],
+      "successFactors": [
+        "Financiamiento federal de largo plazo (CERP)",
+        "Consenso político bipartidista",
+        "Ciencia robusta y monitoreo continuo",
+        "Participación de múltiples stakeholders",
+        "Enfoque adaptativo basado en resultados"
+      ],
+      "references": [
+        {
+          "citation": "Sklar, F. H., Fitz, H. C., Wu, Y., Van Zee, R., & McVoy, C. (2001). The design of ecological landscape models for Everglades restoration. *Ecological Economics*, 37(3), 379-401.",
+          "doi": "10.1016/S0921-8009(01)00180-X",
+          "url": "https://doi.org/10.1016/S0921-8009(01)00180-X"
+        },
+        {
+          "citation": "Perry, W. B. (2004). *Elements of South Florida's Comprehensive Everglades Restoration Plan*. Ecosphere, 1(3), 1-15.",
+          "url": "https://www.evergladesplan.org/"
+        }
+      ],
+      "images": {
+        "hero": "/images/mangroves/everglades-hero.jpg",
+        "gallery": []
+      },
+      "contact": {
+        "organization": "Comprehensive Everglades Restoration Plan",
+        "website": "https://www.evergladesplan.org",
+        "email": "cerp@usace.army.mil"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "carbono-azul",
+      "name": "Carbono Azul",
+      "description": "Proyectos enfocados en captura y almacenamiento de carbono",
+      "icon": "🌍",
+      "color": "cyan"
+    },
+    {
+      "id": "restauracion-comunitaria",
+      "name": "Restauración Comunitaria",
+      "description": "Iniciativas lideradas por comunidades locales",
+      "icon": "👥",
+      "color": "emerald"
+    },
+    {
+      "id": "proteccion-biodiversidad",
+      "name": "Protección de Biodiversidad",
+      "description": "Conservación de especies y hábitats críticos",
+      "icon": "🦎",
+      "color": "teal"
+    },
+    {
+      "id": "restauracion-masiva",
+      "name": "Restauración Masiva",
+      "description": "Proyectos a gran escala (1000+ hectáreas)",
+      "icon": "🌳",
+      "color": "green"
+    },
+    {
+      "id": "restauracion-integral",
+      "name": "Restauración Integral",
+      "description": "Enfoque ecosistémico completo (hidrología + biodiversidad)",
+      "icon": "🔄",
+      "color": "blue"
+    }
+  ],
+  "metrics": {
+    "totalProjects": 5,
+    "totalArea": 27117,
+    "totalAreaRestored": 16267,
+    "totalCarbonSequestration": 1252200,
+    "totalHouseholds": 4057050,
+    "totalJobs": 4670,
+    "countries": 7
+  }
+}

@@ -1,0 +1,140 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MangroveHero from '../../components/manglares/MangroveHero';
+import CategoryGrid from '../../components/manglares/CategoryGrid';
+import ProjectCard from '../../components/manglares/ProjectCard';
+import MangroveMap from '../../components/manglares/MangroveMap';
+import ImpactDashboard from '../../components/manglares/ImpactDashboard';
+
+import projectsData from '../../data/mangroves/projects.json';
+
+const { projects, categories, metrics } = projectsData;
+---
+
+<Layout title="Renovación de Ecosistemas de Manglar | Achiki O'pala">
+  <main class="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
+    
+    <!-- Hero Section -->
+    <MangroveHero client:load />
+
+    <!-- Impact Dashboard -->
+    <section class="container mx-auto px-8 lg:px-16 py-20">
+      <ImpactDashboard metrics={metrics} client:load />
+    </section>
+
+    <!-- Interactive Map -->
+    <section class="container mx-auto px-8 lg:px-16 py-20">
+      <MangroveMap 
+        projects={projects} 
+        client:load 
+      />
+    </section>
+
+    <!-- Category Filter -->
+    <section class="container mx-auto px-8 lg:px-16 py-20">
+      <div id="proyectos"></div>
+      <CategoryGrid 
+        categories={categories}
+        selectedCategory={null}
+        onSelectCategory={() => {}}
+        client:load 
+      />
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="container mx-auto px-8 lg:px-16 py-12 pb-32">
+      <div class="mb-12 text-center">
+        <h2 class="text-4xl font-bold text-white mb-4">
+          Casos de Estudio Documentados
+        </h2>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+          Cada proyecto incluye datos verificables, referencias científicas en formato APA 7 
+          y métricas de impacto medibles
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project: any) => (
+          <ProjectCard 
+            project={project}
+            onViewDetails={(id: string) => {
+              window.location.href = `/manglares/casos/${id}`;
+            }}
+            client:load
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Scientific Foundation CTA -->
+    <section class="container mx-auto px-8 lg:px-16 py-20">
+      <div class="bg-gradient-to-br from-emerald-900/50 via-teal-800/50 to-cyan-900/50 backdrop-blur-sm rounded-3xl p-12 border border-emerald-400/20 text-center">
+        <div class="max-w-3xl mx-auto">
+          <div class="text-6xl mb-6">📚</div>
+          <h2 class="text-4xl font-bold text-white mb-4">
+            Base Científica Completa
+          </h2>
+          <p class="text-xl text-emerald-100 mb-8">
+            Accede a más de 50 referencias bibliográficas en formato APA 7ma edición,
+            metodologías de restauración validadas y datos geoespaciales abiertos
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/documentacion#manglares"
+              class="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-xl hover:scale-105"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+              <span>Ver Referencias Bibliográficas</span>
+            </a>
+            <a 
+              href="/mapa-google"
+              class="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-lg transition-all border border-white/20 hover:border-white/40"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+              </svg>
+              <span>Ver Erosión Costera</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="container mx-auto px-8 lg:px-16 py-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+          <div class="text-5xl mb-4">✅</div>
+          <h3 class="text-xl font-bold text-white mb-2">Datos Verificados</h3>
+          <p class="text-gray-400">
+            Todas las métricas provienen de fuentes oficiales y publicaciones revisadas por pares
+          </p>
+        </div>
+        <div class="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+          <div class="text-5xl mb-4">🌐</div>
+          <h3 class="text-xl font-bold text-white mb-2">Datos Abiertos</h3>
+          <p class="text-gray-400">
+            Acceso libre a datasets geoespaciales, imágenes satelitales y series temporales
+          </p>
+        </div>
+        <div class="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+          <div class="text-5xl mb-4">📊</div>
+          <h3 class="text-xl font-bold text-white mb-2">Actualizado</h3>
+          <p class="text-gray-400">
+            Integración continua con Google Earth Engine y APIs de monitoreo en tiempo real
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

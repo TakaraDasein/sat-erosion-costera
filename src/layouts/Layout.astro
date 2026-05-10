@@ -1,23 +1,96 @@
 ---
 interface Props {
   title: string;
+  description?: string;
+  ogImage?: string;
+  keywords?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title,
+  description = "Achiki O'pala - Sistema de Monitoreo de Línea Costera para Dibulla, La Guajira. Tecnología de sensores IoT, análisis geoespacial e IA comunitaria para protección costera.",
+  ogImage = "/logo.png",
+  keywords = "erosión costera, monitoreo costero, Dibulla, La Guajira, sensores IoT, análisis geoespacial, Digital Earth Africa, Landsat, WOfS, línea costera, cambio climático"
+} = Astro.props;
+
 import '../styles/globals.css';
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="description" content="Achiki O'pala - Sistema de Alerta Temprana para Dibulla, Guajira" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="author" content="Achiki O'pala Team" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Achiki O'pala" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Leaflet CSS (for map pages) -->
+    {Astro.url.pathname.includes('mapa') && (
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+    )}
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#00E5FF" />
+    <meta name="msapplication-TileColor" content="#00E5FF" />
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="CO-LAG" />
+    <meta name="geo.placename" content="Dibulla, La Guajira, Colombia" />
+    <meta name="geo.position" content="11.5;-8.5" />
+    <meta name="ICBM" content="11.5, -8.5" />
   </head>
-  <body class="bg-black text-white overflow-x-hidden">
+  <body class="bg-black text-white overflow-x-hidden antialiased">
     <slot />
+
+    <!-- Performance Optimization -->
+    <script is:inline>
+      // Disable right-click context menu on production
+      if (import.meta.env.PROD) {
+        document.addEventListener('contextmenu', e => e.preventDefault());
+      }
+
+      // Add smooth scroll behavior
+      document.documentElement.style.scrollBehavior = 'smooth';
+
+      // Performance mark
+      performance.mark('app-loaded');
+    </script>
   </body>
 </html>

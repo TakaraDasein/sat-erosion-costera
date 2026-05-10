@@ -1,23 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header';
-import ScrollFade from '../components/ScrollFade';
-import Particles from '../components/Particles';
-import LightPillar from '../components/LightPillar';
-import { Cpu, Users, Map as MapIcon, Mountain, Waves, Satellite } from 'lucide-react';
+import HeroCarousel from '../components/HeroCarousel';
+import TechCarousel from '../components/TechCarousel';
+import CaseStudyCarousel from '../components/CaseStudyCarousel';
+import MonitoringTabs from '../components/MonitoringTabs';
+import MangroveHero from '../components/manglares/MangroveHero';
 ---
 
 <Layout title="Achiki O'pala - Sistema de Alerta Temprana">
-  <!-- Particles Effect -->
-  <Particles client:load />
+  <main class="relative w-full overflow-x-hidden bg-[#f5f5f0]">
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden">
+      <!-- Header with dark background -->
+      <div class="absolute top-0 left-0 right-0 z-50 bg-[#2d2d2d]">
+        <Header client:load />
+      </div>
 
-  <main class="relative w-full overflow-x-hidden bg-black">
-    <!-- Hero Section - Scrolls up -->
-    <section class="sticky top-0 h-screen w-full overflow-hidden bg-black">
-      <!-- Header -->
-      <Header client:load />
-
-      <!-- Video Background with Professional Mask -->
+      <!-- Video Background -->
       <div class="absolute inset-0 z-0">
         <video
           autoplay
@@ -26,207 +26,368 @@ import { Cpu, Users, Map as MapIcon, Mountain, Waves, Satellite } from 'lucide-r
           playsinline
           preload="auto"
           class="absolute inset-0 w-full h-full object-cover"
-          style="filter: brightness(1.05) contrast(1.25) saturate(1.4) hue-rotate(-5deg);"
           id="hero-video"
         >
           <source src="/video.mp4" type="video/mp4" />
         </video>
-
-        <script>
-          // Optimize video playback speed for cinematic effect
-          const video = document.getElementById('hero-video') as HTMLVideoElement;
-          if (video) {
-            // Slow motion for more cinematic feel (0.6x = 40% slower)
-            video.playbackRate = 0.6;
-            
-            // Reduce quality on mobile for performance
-            if (window.innerWidth < 768) {
-              video.style.transform = 'scale(1.1)';
-              video.style.filter = 'brightness(1.0) contrast(1.3) saturate(1.5) blur(1px)';
-            }
-          }
-        </script>
         
-        <!-- Color enhancement overlay mask -->
-        <div class="absolute inset-0 bg-gradient-to-b from-cyan-500/5 via-transparent to-orange-500/5 mix-blend-overlay"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/3 to-transparent mix-blend-soft-light"></div>
-        
-        <!-- Corner-focused Professional Mask - Stronger at edges, transparent in center -->
-        <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-tr from-black/60 via-transparent to-black/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
-        
-        <!-- Logo color gradient overlays -->
-        <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-orange-600/10"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,188,212,0.15),transparent_50%)]"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(210,105,30,0.15),transparent_50%)]"></div>
-        
-        <!-- Subtle noise texture overlay for cinematic feel -->
-        <div class="absolute inset-0 opacity-[0.02] mix-blend-overlay" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 400 400%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
       </div>
 
-      <!-- Content -->
-      <div class="relative z-10 h-full flex flex-col px-8 lg:px-16 py-16 lg:py-20">
-        <!-- Main Content Area -->
-        <div class="flex-1 flex items-start justify-between pt-6 lg:pt-12">
-          <!-- Left Side - Consultation Card with Diagonal Stripes -->
-          <div class="btn-clipped double-stroke bg-stripes-pattern backdrop-blur-2xl bg-gradient-to-br from-black/60 via-gray-900/50 to-black/60 p-6 w-80 min-h-[400px] flex flex-col justify-between transition-none">
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">
-                Sistema de Alerta Temprana Costero
-              </h3>
-              <p class="text-white/80 text-sm leading-relaxed mb-6">
-                Conoce cómo nuestro sistema puede proteger tu comunidad
-              </p>
-            </div>
-            <button class="btn-clipped bg-white text-black px-5 py-3 text-sm font-semibold hover:opacity-90 transition-opacity w-full mt-auto">
-              Conocer
-            </button>
-          </div>
+      <!-- Hero Content -->
+      <div class="relative z-10 h-full flex items-center">
+        <div class="container mx-auto px-8 lg:px-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left: Main Headline -->
+            <div class="space-y-8">
+              <!-- Badge -->
+              <div class="inline-flex items-center gap-3 bg-black/40 backdrop-blur-md rounded-full px-6 py-3 border border-white/10">
+                <span class="text-white/90 text-sm font-medium">Sistema #1 de alerta temprana</span>
+                <a href="#" class="text-cyan-400 text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                  Leer caso de estudio
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
 
-          <!-- Right Side - Action Buttons Vertical with Grid Pattern -->
-          <div class="flex flex-col gap-4">
-            <button class="btn-clipped bg-grid-pattern bg-black/40 border border-white/20 p-4 text-white hover:bg-cyan-400/30 hover:border-cyan-400/50 transition-none group">
-              <Mountain className="w-8 h-8 group-hover:text-cyan-400 transition-none" />
-            </button>
-            <button class="btn-clipped bg-grid-pattern bg-black/40 border border-white/20 p-4 text-white hover:bg-cyan-400/30 hover:border-cyan-400/50 transition-none group">
-              <Waves className="w-8 h-8 group-hover:text-cyan-400 transition-none" />
-            </button>
-            <button class="btn-clipped bg-grid-pattern bg-black/40 border border-white/20 p-4 text-white hover:bg-cyan-400/30 hover:border-cyan-400/50 transition-none group">
-              <Satellite className="w-8 h-8 group-hover:text-cyan-400 transition-none" />
-            </button>
+              <!-- Main Headline -->
+              <h1 class="text-4xl lg:text-5xl font-bold text-white leading-[1.1]">
+                El sistema de monitoreo para <span class="block mt-2">proteger tu costa</span>
+              </h1>
+
+              <!-- Description -->
+              <p class="text-lg text-white/80 leading-relaxed max-w-xl">
+                Tecnología de sensores IoT, análisis geoespacial e IA comunitaria. Flujos inteligentes para control profesional y colaboración. Protección costera a cualquier escala.
+              </p>
+
+              <!-- CTA Buttons -->
+              <div class="flex flex-wrap gap-4">
+                <a href="/mapa-google" class="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/90 transition-all inline-block">
+                  Ver Mapa Interactivo
+                </a>
+                <a href="/documentacion" class="bg-black/40 backdrop-blur-md text-white px-8 py-4 rounded-lg font-semibold text-lg border border-white/20 hover:bg-black/60 transition-all flex items-center gap-2">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                  ¿Por qué Achiki O'pala?
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Animated Feature List -->
+            <div class="lg:pl-12">
+              <HeroCarousel client:load />
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
-        <div class="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <div class="w-1 h-2 bg-white/50 rounded-full animate-bounce"></div>
+      <!-- Trust Bar - Partners -->
+      <div class="absolute bottom-0 left-0 right-0 z-20 bg-black/60 backdrop-blur-xl border-t border-white/10">
+        <div class="container mx-auto px-8 lg:px-16 py-6">
+          <p class="text-white/60 text-sm text-center mb-4">
+            Confiado por 1M+ ciudadanos – comunidades, entidades, agencias y gobiernos
+          </p>
+          <div class="flex justify-center items-center gap-12 flex-wrap opacity-50 grayscale">
+            <!-- Partner logos - placeholder -->
+            <div class="text-white/40 font-bold text-lg">UNGRD</div>
+            <div class="text-white/40 font-bold text-lg">PNUD</div>
+            <div class="text-white/40 font-bold text-lg">MinAmbiente</div>
+            <div class="text-white/40 font-bold text-lg">Dibulla</div>
+            <div class="text-white/40 font-bold text-lg">La Guajira</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Content wrapper - slides over hero -->
-    <div class="relative z-30 bg-black">
-      <!-- Shared Light Pillar Background for sections 2 and 3 -->
-      <div class="absolute inset-0 z-0">
-        <LightPillar 
-          client:load
-          topColor="#00E5FF"
-          bottomColor="#FF7043"
-          intensity={1.4}
-          rotationSpeed={0.15}
-          glowAmount={0.004}
-          pillarWidth={2.5}
-          pillarHeight={0.6}
-          noiseIntensity={0.2}
-          quality="high"
-        />
+    <!-- Section: One place to monitor everything -->
+    <section class="py-32 bg-[#f5f5f0]">
+      <div class="container mx-auto px-8 lg:px-16">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-5xl lg:text-6xl font-bold text-[#2d1810] mb-6">
+            Un lugar para monitorear todo
+          </h2>
+          <p class="text-xl text-[#2d1810]/70 max-w-3xl mx-auto">
+            Elige tu punto de partida. Cada herramienta, cada modelo, cada formato.
+          </p>
+        </div>
+
+        <!-- Interactive Monitoring Tabs -->
+        <MonitoringTabs client:load />
+      </div>
+    </section>
+
+    <!-- Section: Mangrove Restoration Hero -->
+    <MangroveHero client:load />
+
+    <!-- Section: With all the latest models -->
+    <section class="py-32 bg-white">
+      <div class="container mx-auto px-8 lg:px-16">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-5xl lg:text-6xl font-bold text-[#2d1810] mb-6">
+            Con toda la tecnología más reciente
+          </h2>
+          <p class="text-xl text-[#2d1810]/70 max-w-4xl mx-auto">
+            Accede a las compañías líderes mundiales en tecnología para que nunca tengas que elegir entre los mejores modelos y el flujo de trabajo más fácil.
+          </p>
+        </div>
+
+        <!-- Interactive Tech Carousel -->
+        <TechCarousel client:load />
+      </div>
+    </section>
+
+    <!-- Section: Start simple, Scale when ready -->
+    <section class="py-32 bg-[#f5f5f0]">
+      <div class="container mx-auto px-8 lg:px-16">
+        <!-- Section Header -->
+        <div class="mb-16">
+          <h2 class="text-5xl lg:text-7xl font-bold text-[#2d1810] mb-6">
+            Comienza simple.<br />
+            Escala cuando estés listo
+          </h2>
+          <p class="text-xl text-[#2d1810]/70 max-w-2xl">
+            Desde una sola herramienta hasta un flujo completo, a tu propio ritmo.
+          </p>
+        </div>
+
+        <!-- Feature Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Card 1: Every tool ready -->
+          <div class="bg-[#e8e6e1] rounded-3xl p-12 hover:scale-[1.02] transition-transform">
+            <h3 class="text-4xl font-bold text-[#2d1810] mb-6">
+              Cada herramienta, lista para usar
+            </h3>
+            <p class="text-[#2d1810]/70 text-lg leading-relaxed mb-8">
+              Sensores, satélites, IA — treinta herramientas, sin configuración. Abre lo que necesitas, crea lo que quieras.
+            </p>
+            <div class="bg-white rounded-2xl p-6 border border-gray-200">
+              <div class="flex gap-3 mb-4">
+                <button class="px-4 py-2 bg-[#2d1810] text-white rounded-lg text-sm font-medium">TODO</button>
+                <button class="px-4 py-2 bg-white text-[#2d1810] rounded-lg text-sm font-medium border border-gray-200">SENSORES</button>
+                <button class="px-4 py-2 bg-white text-[#2d1810] rounded-lg text-sm font-medium border border-gray-200">SATÉLITES</button>
+                <button class="px-4 py-2 bg-white text-[#2d1810] rounded-lg text-sm font-medium border border-gray-200">IA</button>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="aspect-square bg-gradient-to-br from-pink-200 to-purple-300 rounded-xl"></div>
+                <div class="aspect-square bg-gradient-to-br from-cyan-200 to-blue-300 rounded-xl"></div>
+                <div class="aspect-square bg-gradient-to-br from-orange-200 to-red-300 rounded-xl"></div>
+                <div class="aspect-square bg-gradient-to-br from-green-200 to-emerald-300 rounded-xl"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Your entire process -->
+          <div class="bg-[#1a1a1a] rounded-3xl p-12 hover:scale-[1.02] transition-transform relative overflow-hidden">
+            <h3 class="text-4xl font-bold text-white mb-6">
+              Tu proceso completo en un canvas
+            </h3>
+            <p class="text-white/70 text-lg leading-relaxed mb-8">
+              Todas tus herramientas. Todos tus flujos de trabajo. Un canvas infinito basado en nodos. Ramifica ideas, compara versiones, trabaja con tu equipo.
+            </p>
+            <div class="relative">
+              <div class="aspect-video bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl border border-white/10 relative overflow-hidden">
+                <!-- Node diagram illustration -->
+                <div class="absolute top-1/4 left-1/4 w-32 h-20 bg-cyan-500/20 border border-cyan-400 rounded-lg backdrop-blur-sm flex items-center justify-center">
+                  <span class="text-cyan-400 text-xs font-mono">Sensor Data</span>
+                </div>
+                <div class="absolute top-1/2 right-1/3 w-32 h-20 bg-orange-500/20 border border-orange-400 rounded-lg backdrop-blur-sm flex items-center justify-center">
+                  <span class="text-orange-400 text-xs font-mono">Analysis</span>
+                </div>
+                <div class="absolute bottom-1/4 right-1/4 w-24 h-24 bg-pink-500/20 border-2 border-pink-400 rounded-full backdrop-blur-sm flex items-center justify-center">
+                  <span class="text-pink-400 text-xs font-bold">RUN APP</span>
+                </div>
+                <!-- Connecting lines -->
+                <svg class="absolute inset-0 w-full h-full">
+                  <path d="M 150 80 Q 200 120 280 140" stroke="rgba(0,229,255,0.3)" stroke-width="2" fill="none"/>
+                  <path d="M 350 140 Q 380 160 400 180" stroke="rgba(255,112,67,0.3)" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: One place, whole team -->
+          <div class="bg-[#5c3a31] rounded-3xl p-12 hover:scale-[1.02] transition-transform">
+            <h3 class="text-4xl font-bold text-white mb-6">
+              Un lugar, todo el equipo
+            </h3>
+            <p class="text-white/80 text-lg leading-relaxed mb-8">
+              Organiza recursos de marca, contenido generado y flujos de trabajo con Proyectos. Tu equipo trabaja junto, tu trabajo permanece junto.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="aspect-square bg-gradient-to-br from-pink-300 to-orange-200 rounded-2xl"></div>
+              <div class="aspect-square bg-gradient-to-br from-cyan-300 to-teal-200 rounded-2xl"></div>
+            </div>
+          </div>
+
+          <!-- Card 4: Workflow in one click -->
+          <div class="bg-[#1e4a5d] rounded-3xl p-12 hover:scale-[1.02] transition-transform relative overflow-hidden">
+            <h3 class="text-4xl font-bold text-white mb-6">
+              Flujo de trabajo en un clic
+            </h3>
+            <p class="text-white/80 text-lg leading-relaxed mb-8">
+              Guarda cualquier flujo complejo on-brand como una App. La siguiente persona lo ejecuta en un clic.
+            </p>
+            <div class="aspect-video bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-2xl border border-white/10 flex items-center justify-center relative">
+              <div class="absolute inset-0 bg-[url('/video.mp4')] bg-cover bg-center opacity-30 rounded-2xl"></div>
+              <div class="relative z-10 w-32 h-32 bg-pink-500 rounded-full flex items-center justify-center shadow-2xl shadow-pink-500/50 hover:scale-110 transition-transform cursor-pointer">
+                <span class="text-white font-bold text-lg">RUN APP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Case Studies -->
+    <section class="py-32 bg-white">
+      <div class="container mx-auto px-8 lg:px-16">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-5xl lg:text-6xl font-bold text-[#2d1810] mb-6">
+            Implementado en Achiki O'pala
+          </h2>
+          <p class="text-xl text-[#2d1810]/70 max-w-3xl mx-auto">
+            Proyectos originales realizados por comunidades y expertos alrededor del mundo.
+          </p>
+        </div>
+
+        <!-- Interactive Case Study Carousel -->
+        <CaseStudyCarousel client:load />
+      </div>
+    </section>
+
+    <!-- Footer CTA Section -->
+    <section class="relative h-screen overflow-hidden">
+      <!-- Gradient Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-[#4a3461] via-[#6b4a5a] to-[#d97556]"></div>
+      
+      <!-- Geometric overlay -->
+      <div class="absolute inset-0">
+        <div class="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-br from-pink-500/20 to-transparent"></div>
+        <div class="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-tl from-orange-500/20 to-transparent"></div>
+        <svg class="absolute inset-0 w-full h-full opacity-30" preserveAspectRatio="none">
+          <line x1="0%" y1="0%" x2="100%" y2="100%" stroke="rgba(255,192,203,0.3)" stroke-width="2"/>
+          <line x1="100%" y1="30%" x2="0%" y2="80%" stroke="rgba(255,165,0,0.3)" stroke-width="2"/>
+        </svg>
       </div>
 
-      <!-- Dibulla Case Section - Banner with Scroll Fade (SECOND SECTION) -->
-      <section class="relative py-32 lg:py-48 overflow-hidden">
-        <!-- Dark overlay for readability -->
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/40"></div>
+      <!-- Silhouette Image -->
+      <div class="absolute bottom-0 right-0 w-1/2 h-3/4">
+        <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#4a3461]"></div>
+        <img src="/video.mp4" alt="Silhouette" class="w-full h-full object-cover object-right opacity-80" />
+      </div>
 
-        <div class="container mx-auto px-8 lg:px-16 relative z-10">
-          <ScrollFade client:load className="max-w-5xl mx-auto">
-            <div class="text-center space-y-8">
-              <h2 class="text-[36px] lg:text-[56px] font-bold uppercase text-white leading-tight">
-                El Caso de Dibulla
-              </h2>
-              
-              <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 via-orange-600 to-cyan-500 mx-auto"></div>
-              
-              <p class="text-white/90 text-lg lg:text-xl leading-relaxed">
-                La erosión costera en el municipio de <span class="text-orange-600 font-semibold">Dibulla (La Guajira)</span> ha provocado retrocesos de la línea de costa de hasta <span class="text-orange-600 font-semibold">170–175 metros en los últimos 35 años</span>, comprometiendo viviendas, infraestructura turística y, de manera crítica, el territorio ancestral de comunidades wayúu como la ranchería <span class="text-cyan-400 font-semibold">La Cachaca III</span>, donde la pérdida de playas, albercas y especies como el «chipi chipi» constituye una crisis humanitaria y cultural.
-              </p>
-
-              <div class="flex flex-wrap justify-center gap-4 pt-8">
-                <div class="liquid-glass rounded-xl px-6 py-4 border border-orange-600/20">
-                  <div class="text-orange-600 text-3xl font-bold">170m</div>
-                  <div class="text-white/70 text-sm uppercase tracking-wide">Retroceso</div>
-                </div>
-                <div class="liquid-glass rounded-xl px-6 py-4 border border-orange-600/20">
-                  <div class="text-orange-600 text-3xl font-bold">35</div>
-                  <div class="text-white/70 text-sm uppercase tracking-wide">Años</div>
-                </div>
-                <div class="liquid-glass rounded-xl px-6 py-4 border border-cyan-500/20">
-                  <div class="text-cyan-400 text-3xl font-bold">1</div>
-                  <div class="text-white/70 text-sm uppercase tracking-wide">Comunidad</div>
-                </div>
-              </div>
-
-              <p class="text-white/60 text-sm italic pt-4">
-                Fuente: Ávila & Baez, 2022; Vorágine, 2024
-              </p>
-            </div>
-          </ScrollFade>
-        </div>
-      </section>
-
-      <!-- Enfoques Section - Cards -->
-      <section class="relative py-20 lg:py-32">
-        <!-- Dark overlay for readability -->
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
-
-        <div class="container mx-auto px-8 lg:px-16 relative z-10">
-          <!-- Section Header -->
-          <div class="text-center mb-16">
-            <h2 class="text-[32px] lg:text-[48px] font-bold uppercase text-white leading-tight mb-4">
-              Nuestros Enfoques
+      <!-- Content -->
+      <div class="relative z-10 h-full flex items-center">
+        <div class="container mx-auto px-8 lg:px-16">
+          <div class="max-w-2xl">
+            <h2 class="text-6xl lg:text-8xl font-bold text-white mb-12">
+              Sé Achiki O'pala
             </h2>
-            <p class="text-white/70 text-lg max-w-2xl mx-auto">
-              Tecnología avanzada al servicio de las comunidades costeras
-            </p>
-          </div>
-
-          <!-- Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Card 1: IoT basado en Edge -->
-            <div class="liquid-glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300 border border-orange-600/20">
-              <div class="w-16 h-16 rounded-full bg-orange-600/20 flex items-center justify-center mb-6">
-                <Cpu className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 class="text-white font-bold text-xl uppercase mb-4">
-                IoT basado en Edge
-              </h3>
-              <p class="text-white/70 text-sm leading-relaxed">
-                Sensores inteligentes distribuidos en la costa que procesan datos en tiempo real, permitiendo respuestas inmediatas sin depender de conexión constante a la nube.
-              </p>
-            </div>
-
-            <!-- Card 2: IA Comunitaria Contextual -->
-            <div class="liquid-glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300 border border-cyan-500/20">
-              <div class="w-16 h-16 rounded-full bg-cyan-500/20 flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-cyan-500" />
-              </div>
-              <h3 class="text-white font-bold text-xl uppercase mb-4">
-                IA Comunitaria Contextual
-              </h3>
-              <p class="text-white/70 text-sm leading-relaxed">
-                Inteligencia artificial que aprende del conocimiento ancestral wayúu, integrando saberes tradicionales con tecnología moderna para alertas culturalmente relevantes.
-              </p>
-            </div>
-
-            <!-- Card 3: Análisis Geoespacial -->
-            <div class="liquid-glass rounded-2xl p-8 hover:scale-105 transition-transform duration-300 border border-orange-600/20">
-              <div class="w-16 h-16 rounded-full bg-orange-600/20 flex items-center justify-center mb-6">
-                <MapIcon className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 class="text-white font-bold text-xl uppercase mb-4">
-                Análisis Geoespacial y Proyección
-              </h3>
-              <p class="text-white/70 text-sm leading-relaxed">
-                Modelado predictivo de la línea costera usando datos satelitales y topográficos, anticipando retrocesos y protegiendo territorios ancestrales.
-              </p>
-            </div>
+            <a href="/mapa-google" class="bg-[#2d2d2d] text-white px-10 py-5 rounded-xl font-semibold text-xl hover:bg-[#1a1a1a] transition-all flex items-center gap-3 group inline-flex">
+              Ver Mapa Interactivo
+              <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-white py-20">
+      <div class="container mx-auto px-8 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
+          <!-- Column 1: Logo & Description -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center gap-3 mb-6">
+              <img src="/logo.png" alt="Achiki O'pala" class="w-10 h-10" />
+              <span class="text-2xl font-bold">Achiki O'pala</span>
+            </div>
+            <p class="text-white/60 mb-8 leading-relaxed">
+              El sistema de monitoreo para proteger tu costa. Más de 1 millón de suscriptores en comunidades, empresas, agencias y gobiernos.
+            </p>
+            <button class="flex items-center gap-2 px-6 py-3 border border-white/20 rounded-lg hover:bg-white/5 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+              </svg>
+              Español
+            </button>
+          </div>
+
+          <!-- Column 2: Products -->
+          <div>
+            <h4 class="font-semibold text-sm text-pink-400 uppercase mb-4">Productos</h4>
+            <ul class="space-y-3 text-white/60">
+              <li><a href="#" class="hover:text-white transition-colors">Sensores</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">IA Asistente</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Análisis Geoespacial</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Generador de Reportes</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Alertas de Voz</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Datos Satelitales</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">App iOS</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">App Android</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Get started -->
+          <div>
+            <h4 class="font-semibold text-sm text-cyan-400 uppercase mb-4">Comienza</h4>
+            <ul class="space-y-3 text-white/60">
+              <li><a href="#" class="hover:text-white transition-colors">Academia</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Documentación</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Soporte</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Términos de uso</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Política de privacidad</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Casos de estudio</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Company -->
+          <div>
+            <h4 class="font-semibold text-sm text-orange-400 uppercase mb-4">Organización</h4>
+            <ul class="space-y-3 text-white/60">
+              <li><a href="#" class="hover:text-white transition-colors">Precios</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Sobre nosotros</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Equipo</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Eventos</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8">
+          <p class="text-white/40 text-sm text-center">
+            Copyright © 2024-2026 Achiki O'pala. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
   </main>
+
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+
+  <script>
+    // Video playback optimization
+    const video = document.getElementById('hero-video') as HTMLVideoElement;
+    if (video) {
+      video.playbackRate = 0.6;
+    }
+  </script>
 </Layout>

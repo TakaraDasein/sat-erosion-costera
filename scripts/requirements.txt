@@ -1,0 +1,27 @@
+# Requisitos de Python para procesamiento de imágenes satelitales
+# Google Earth Engine y procesamiento geoespacial
+
+# Google Earth Engine
+earthengine-api>=0.1.384
+geemap>=0.30.0
+
+# Procesamiento de datos geoespaciales
+geopandas>=0.14.0
+shapely>=2.0.0
+fiona>=1.9.0
+rasterio>=1.3.0
+pyproj>=3.6.0
+
+# Análisis numérico y visualización
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+scipy>=1.11.0
+
+# Utilidades
+python-dotenv>=1.0.0
+requests>=2.31.0
+tqdm>=4.66.0
+
+# Exportación de datos
+geojson>=3.0.0

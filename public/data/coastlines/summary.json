@@ -1,0 +1,356 @@
+{
+  "location": "Dibulla-Palomino, La Guajira, Colombia",
+  "bounds": {
+    "north": 11.35,
+    "south": 11.15,
+    "east": -73.25,
+    "west": -73.45
+  },
+  "years": [
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "total_years": 25,
+  "processing_date": "2026-05-09T16:21:23.286015",
+  "files": [
+    {
+      "year": 2000,
+      "file": "coastline_2000.geojson",
+      "metadata": {
+        "date": "2000-03-02",
+        "satellite": "L5",
+        "cloud_cover": 17.2,
+        "features_count": 1,
+        "length_km": 23.89,
+        "year": 2000
+      }
+    },
+    {
+      "year": 2001,
+      "file": "coastline_2001.geojson",
+      "metadata": {
+        "date": "2001-12-12",
+        "satellite": "L5",
+        "cloud_cover": 14.9,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2001
+      }
+    },
+    {
+      "year": 2002,
+      "file": "coastline_2002.geojson",
+      "metadata": {
+        "date": "2002-12-17",
+        "satellite": "L5",
+        "cloud_cover": 7.2,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2002
+      }
+    },
+    {
+      "year": 2003,
+      "file": "coastline_2003.geojson",
+      "metadata": {
+        "date": "2003-12-23",
+        "satellite": "L5",
+        "cloud_cover": 17.4,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2003
+      }
+    },
+    {
+      "year": 2004,
+      "file": "coastline_2004.geojson",
+      "metadata": {
+        "date": "2004-12-26",
+        "satellite": "L5",
+        "cloud_cover": 11.6,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2004
+      }
+    },
+    {
+      "year": 2005,
+      "file": "coastline_2005.geojson",
+      "metadata": {
+        "date": "2005-03-01",
+        "satellite": "L5",
+        "cloud_cover": 3.2,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2005
+      }
+    },
+    {
+      "year": 2006,
+      "file": "coastline_2006.geojson",
+      "metadata": {
+        "date": "2006-03-03",
+        "satellite": "L5",
+        "cloud_cover": 12.4,
+        "features_count": 1,
+        "length_km": 23.89,
+        "year": 2006
+      }
+    },
+    {
+      "year": 2007,
+      "file": "coastline_2007.geojson",
+      "metadata": {
+        "date": "2007-01-25",
+        "satellite": "L5",
+        "cloud_cover": 12.6,
+        "features_count": 1,
+        "length_km": 23.9,
+        "year": 2007
+      }
+    },
+    {
+      "year": 2008,
+      "file": "coastline_2008.geojson",
+      "metadata": {
+        "date": "2008-01-18",
+        "satellite": "L5",
+        "cloud_cover": 16.0,
+        "features_count": 1,
+        "length_km": 23.9,
+        "year": 2008
+      }
+    },
+    {
+      "year": 2009,
+      "file": "coastline_2009.geojson",
+      "metadata": {
+        "date": "2009-02-21",
+        "satellite": "L5",
+        "cloud_cover": 16.3,
+        "features_count": 1,
+        "length_km": 23.9,
+        "year": 2009
+      }
+    },
+    {
+      "year": 2010,
+      "file": "coastline_2010.geojson",
+      "metadata": {
+        "date": "2010-01-16",
+        "satellite": "L5",
+        "cloud_cover": 9.3,
+        "features_count": 1,
+        "length_km": 23.9,
+        "year": 2010
+      }
+    },
+    {
+      "year": 2011,
+      "file": "coastline_2011.geojson",
+      "metadata": {
+        "date": "2011-01-26",
+        "satellite": "L5",
+        "cloud_cover": 6.9,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2011
+      }
+    },
+    {
+      "year": 2012,
+      "file": "coastline_2012.geojson",
+      "metadata": {
+        "date": "2012-12-16",
+        "satellite": "L7",
+        "cloud_cover": 7.8,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2012
+      }
+    },
+    {
+      "year": 2013,
+      "file": "coastline_2013.geojson",
+      "metadata": {
+        "date": "2013-03-27",
+        "satellite": "L8",
+        "cloud_cover": 2.8,
+        "features_count": 1,
+        "length_km": 23.9,
+        "year": 2013
+      }
+    },
+    {
+      "year": 2014,
+      "file": "coastline_2014.geojson",
+      "metadata": {
+        "date": "2014-02-19",
+        "satellite": "L8",
+        "cloud_cover": 8.4,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2014
+      }
+    },
+    {
+      "year": 2015,
+      "file": "coastline_2015.geojson",
+      "metadata": {
+        "date": "2015-12-21",
+        "satellite": "L8",
+        "cloud_cover": 12.4,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2015
+      }
+    },
+    {
+      "year": 2016,
+      "file": "coastline_2016.geojson",
+      "metadata": {
+        "date": "2016-03-18",
+        "satellite": "L8",
+        "cloud_cover": 16.0,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2016
+      }
+    },
+    {
+      "year": 2017,
+      "file": "coastline_2017.geojson",
+      "metadata": {
+        "date": "2017-01-15",
+        "satellite": "L8",
+        "cloud_cover": 7.5,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2017
+      }
+    },
+    {
+      "year": 2018,
+      "file": "coastline_2018.geojson",
+      "metadata": {
+        "date": "2018-01-01",
+        "satellite": "L8",
+        "cloud_cover": 8.5,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2018
+      }
+    },
+    {
+      "year": 2019,
+      "file": "coastline_2019.geojson",
+      "metadata": {
+        "date": "2019-01-26",
+        "satellite": "L8",
+        "cloud_cover": 5.9,
+        "features_count": 1,
+        "length_km": 23.9,
+        "year": 2019
+      }
+    },
+    {
+      "year": 2020,
+      "file": "coastline_2020.geojson",
+      "metadata": {
+        "date": "2020-01-22",
+        "satellite": "L8",
+        "cloud_cover": 14.3,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2020
+      }
+    },
+    {
+      "year": 2021,
+      "file": "coastline_2021.geojson",
+      "metadata": {
+        "date": "2021-03-28",
+        "satellite": "L9",
+        "cloud_cover": 12.1,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2021
+      }
+    },
+    {
+      "year": 2022,
+      "file": "coastline_2022.geojson",
+      "metadata": {
+        "date": "2022-02-15",
+        "satellite": "L9",
+        "cloud_cover": 10.7,
+        "features_count": 1,
+        "length_km": 23.91,
+        "year": 2022
+      }
+    },
+    {
+      "year": 2023,
+      "file": "coastline_2023.geojson",
+      "metadata": {
+        "date": "2023-03-23",
+        "satellite": "L9",
+        "cloud_cover": 17.5,
+        "features_count": 1,
+        "length_km": 23.93,
+        "year": 2023
+      }
+    },
+    {
+      "year": 2024,
+      "file": "coastline_2024.geojson",
+      "metadata": {
+        "date": "2024-03-06",
+        "satellite": "L9",
+        "cloud_cover": 13.7,
+        "features_count": 1,
+        "length_km": 23.92,
+        "year": 2024
+      }
+    }
+  ],
+  "erosion_summary": {
+    "critical_zones": [
+      {
+        "name": "La Cachaca III",
+        "rate": -2.5,
+        "total_2000_2024": -60.0
+      },
+      {
+        "name": "Dibulla Centro",
+        "rate": -2.1,
+        "total_2000_2024": -50.4
+      }
+    ],
+    "average_erosion_rate": -1.4,
+    "total_coastline_retreat": -33.6
+  }
+}
